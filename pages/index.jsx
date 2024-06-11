@@ -32,7 +32,7 @@ const Home = () => {
             exit="hidden"
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
-            Ha szükséged lenne egy weboldal- és szoftverfejlesztőre vagy éppen egy fotósra, keress bátran és közös munkával megvalósítjuk digitális álmaidat.
+            Ha szükséged van egy weboldal- és szoftverfejlesztőre vagy egy fotósra, keress bátran és közös munkával megvalósítjuk digitális álmaidat.
           </motion.p>
 
           {/* btn */}
