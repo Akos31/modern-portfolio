@@ -4,16 +4,24 @@ import CountUp from "react-countup";
 import {
   FaCss3,
   FaFigma,
+  FaGoogle,
+  FaHandScissors,
   FaHtml5,
   FaJs,
+  FaPhp,
   FaReact,
+  FaRegHandScissors,
   FaWordpress,
 } from "react-icons/fa";
 import {
+  SiAdobelightroomclassic,
   SiAdobephotoshop,
   SiAdobexd,
+  SiCanva,
   SiFramer,
   SiNextdotjs,
+  SiNikon,
+  SiPhotobucket,
 } from "react-icons/si";
 
 import Avatar from "../../components/Avatar";
@@ -23,70 +31,76 @@ import { fadeIn } from "../../variants";
 //  data
 export const aboutData = [
   {
-    title: "skills",
+    title: "Szakismeret",
     info: [
       {
-        title: "Web Development",
+        title: "Weboldal fejlesztés",
         icons: [
           FaHtml5,
           FaCss3,
           FaJs,
-          FaReact,
           SiNextdotjs,
           SiFramer,
-          FaWordpress,
+          FaPhp,
         ],
       },
       {
-        title: "UI/UX Design",
-        icons: [FaFigma, SiAdobexd, SiAdobephotoshop],
+        title: "Grafika",
+        icons: [SiAdobephotoshop, SiAdobelightroomclassic, SiCanva],
+      },
+      {
+        title: "Fotózás",
+        icons: [SiPhotobucket, SiNikon],
+      },
+      {
+        title: "Videóvágás",
+        icons: [FaRegHandScissors],
+      },
+      {
+        title: "Domain & SEO",
+        icons: [FaGoogle],
       },
     ],
   },
   {
-    title: "awards",
+    title: "Érdeklődési kör",
     info: [
       {
-        title: "Webby Awards - Honoree",
-        stage: "2011 - 2012",
+        title: "Sportolás",
+        stage: "Futball, röplabda, biciklizés, lábtenisz, úszás, ping-pong",
       },
       {
-        title: "Adobe Design Achievement Awards - Finalist",
-        stage: "2009 - 2010",
+        title: "Utazás",
+        stage: "Dánia, Ciprus, Törökország, Horvátország, Spanyolország",
+      },
+      {
+        title: "Önkénteskedés",
+        stage: "Fesztiválokon, koncerteken",
+      },
+      {
+        title: "Zene",
+        stage: "Gitározás",
       },
     ],
   },
   {
-    title: "experience",
+    title: "Bizonyítványok",
     info: [
       {
-        title: "UX/UI Designer - XYZ Company",
-        stage: "2012 - 2023",
+        title: "Amatőr labdarúgó játékvezető",
+        stage: "2024",
       },
       {
-        title: "Web Developer - ABC Agency",
-        stage: "2010 - 2012",
+        title: "Digitális kultúra emelt érettségi",
+        stage: "2022",
       },
       {
-        title: "Intern - DEF Corporation",
-        stage: "2008 - 2010",
-      },
-    ],
-  },
-  {
-    title: "credentials",
-    info: [
-      {
-        title: "Web Development - ABC University, LA, CA",
-        stage: "2011",
+        title: "Emelt angol szintű nyelvvizsga (C1)",
+        stage: "2022",
       },
       {
-        title: "Computer Science Diploma - AV Technical Institute",
-        stage: "2009",
-      },
-      {
-        title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
-        stage: "2006",
+        title: "Digisuli weblapszerkesztő tanfolyam",
+        stage: "2019",
       },
     ],
   },
@@ -120,8 +134,8 @@ const About = () => {
             exit="hidden"
             className="h2"
           >
-            Captivating <span className="text-accent">stories</span> birth
-            magnificent designs.
+            Ki vagyok <span className="text-accent">én</span>
+            ?
           </motion.h2>
           <motion.p
             variants={fadeIn("right", 0.4)}
@@ -129,12 +143,17 @@ const About = () => {
             animate="show"
             className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
           >
-            10 years ago, I begin freelancing as a developer. Since then, I've
-            done remote work for agencies, consulted for startups, and
-            collabrated on digital products for business and consumer use.
+            Egy fiatal lelkes, digitális világért rajongó srác, aki szakmai téren nagyon szenvedélyes az informatika és a fotózás iránt. Szabadidejét szereti barátokkal, sportolással, vagy zenéléssel tölteni.
+
           </motion.p>
 
           {/* counters */}
+          <motion.h1
+            variants={fadeIn("right", 0.6)}
+            initial="hidden"
+            animate="show"
+            className="text-xl mb-5"
+          >Tapasztalati évek száma</motion.h1>
           <motion.div
             variants={fadeIn("right", 0.6)}
             initial="hidden"
@@ -145,43 +164,44 @@ const About = () => {
               {/* experience */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={10} duration={5} />
+                  <CountUp start={0} end={6} duration={10} />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Years of experience.
+                  Weboldal fejlesztés
                 </div>
               </div>
 
               {/* clients */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={250} duration={5} />
+                  <CountUp start={0} end={4} duration={10} />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Satisfied clients.
+                  Grafika
                 </div>
               </div>
 
               {/* projects */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={650} duration={5} />
+                  <CountUp start={0} end={1} duration={10} />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Finished projects.
+                  Fotózás
                 </div>
               </div>
 
               {/* awards */}
               <div className="relative flex-1">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={8} duration={5} />
+                  <CountUp start={0} end={3} duration={10} />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Winning awards.
+                  Domain & SEO
                 </div>
               </div>
             </div>
+            <br />
           </motion.div>
         </div>
 

@@ -13,17 +13,17 @@ import {
 
 // nav data
 export const navData = [
-  { name: "home", path: "/", Icon: HiHome },
-  { name: "about", path: "/about", Icon: HiUser },
-  { name: "services", path: "/services", Icon: HiRectangleGroup },
-  { name: "work", path: "/work", Icon: HiViewColumns },
-  {
+  { name: "Kezdőlap", path: "/", Icon: HiHome },
+  { name: "Rólam", path: "/about", Icon: HiUser },
+  { name: "Szolgáltatások", path: "/services", Icon: HiRectangleGroup },
+  { name: "Munkáim", path: "/work", Icon: HiViewColumns },
+  /*{
     name: "testimonials",
     path: "/testimonials",
     Icon: HiChatBubbleBottomCenterText,
-  },
+  },*/
   {
-    name: "contact",
+    name: "Kapcsolat",
     path: "/contact",
     Icon: HiEnvelope,
   },

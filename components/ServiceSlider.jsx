@@ -5,6 +5,8 @@ import {
   RxReader,
   RxRocket,
   RxArrowTopRight,
+  RxCamera,
+  RxScissors,
 } from "react-icons/rx";
 import { FreeMode, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -15,30 +17,30 @@ import "swiper/css/pagination";
 
 const serviceData = [
   {
-    Icon: RxCrop,
-    title: "Branding",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    Icon: RxDesktop,
+    title: "Weboldalfejlesztés",
+    description: "Landing page, webalkalmazás, adatbázis kezelés",
+  },
+  {
+    Icon: RxCamera,
+    title: "Fotózás & Videózás",
+    description: "Sportesemény, rendezvény, termék fotózás",
   },
   {
     Icon: RxPencil2,
-    title: "Design",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Grafika",
+    description: "Logó készítés, képszerkesztés, digitális fényelés",
   },
   {
-    Icon: RxDesktop,
-    title: "Development",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    Icon: RxReader,
-    title: "Copywriting",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    Icon: RxRocket,
-    title: "SEO",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
+    Icon: RxScissors,
+    title: "Videó vágás",
+    description: "Összefoglaló, promóciós videó, montázs",
+    },
+      {
+      Icon: RxRocket,
+      title: "SEO és Domain",
+      description: "Weboldal elhelyezése a Google keresőmotorban",
+      },
 ];
 
 const ServiceSlider = () => {

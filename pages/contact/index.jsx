@@ -7,21 +7,30 @@ import { useState } from "react";
 const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     setIsLoading(true);
 
     const myForm = event.target;
     const formData = new FormData(myForm);
 
-    fetch("/", {
+    formData.append("access_key", "bb71de99-aab7-4bda-b3ce-c688b0c0b82c")
+
+    const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => alert("Thank you. I will get back to you ASAP."))
-      .catch((error) => console.log(error))
-      .finally(() => setIsLoading(false));
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setIsLoading("Sikeresen kézbesítve");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setIsLoading(data.message);
+    }
+
   };
 
   return (
@@ -37,7 +46,7 @@ const Contact = () => {
             exit="hidden"
             className="h2 text-center mb-12"
           >
-            Let's <span className="text-accent">connect.</span>
+            Lépjünk <span className="text-accent">kapcsolatba.</span>
           </motion.h2>
 
           {/* form */}
@@ -58,7 +67,7 @@ const Contact = () => {
               <input
                 type="text"
                 name="name"
-                placeholder="Name"
+                placeholder="Név"
                 className="input"
                 disabled={isLoading}
                 aria-disabled={isLoading}
@@ -79,7 +88,7 @@ const Contact = () => {
             <input
               type="text"
               name="subject"
-              placeholder="Subject"
+              placeholder="Tárgy"
               className="input"
               disabled={isLoading}
               aria-disabled={isLoading}
@@ -88,7 +97,7 @@ const Contact = () => {
             />
             <textarea
               name="message"
-              placeholder="Message..."
+              placeholder="Üzenet..."
               className="textarea"
               disabled={isLoading}
               aria-disabled={isLoading}
@@ -102,14 +111,16 @@ const Contact = () => {
               aria-disabled={isLoading}
             >
               <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
-                Let's talk
+                Küldés
               </span>
+
 
               <BsArrowRight
                 className="-translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]"
                 aria-hidden
-              />
+                />
             </button>
+            <span className="text-center text-green-500 text-xl uppercase">{isLoading}</span>
           </motion.form>
         </div>
       </div>
