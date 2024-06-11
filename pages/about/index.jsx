@@ -67,7 +67,7 @@ export const aboutData = [
     info: [
       {
         title: "Sportolás",
-        stage: "Futball, röplabda, biciklizés, lábtenisz, úszás, ping-pong",
+        stage: "Futball, röplabda, biciklizés, lábtenisz, úszás",
       },
       {
         title: "Utazás",
@@ -235,7 +235,7 @@ const About = () => {
                 className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-center text-white/60"
               >
                 {/* title */}
-                <div className="font-light mb-2 md:mb-0">{item.title}</div>
+                <div className="font-medium tracking-wide mb-2 md:mb-0">{item.title}</div>
                 <div className="hidden md:flex">-</div>
                 <div>{item.stage}</div>
 
