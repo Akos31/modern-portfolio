@@ -66,7 +66,7 @@ const WorkSlider = () => {
                       href={image.link}
                       target="_blank"
                       rel="noreferrer noopener"
-                      className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]"
+                      className="flex items-center gap-x-2 sm:text-[13px] text-[10px] tracking-[0.2em]"
                     >
                       {/* title part 1 */}
                       <div className="delay-100">MEGTEKINTÉS</div>

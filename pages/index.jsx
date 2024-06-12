@@ -32,7 +32,7 @@ const Home = () => {
             exit="hidden"
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
-            Ha szükséged van egy weboldal- és szoftverfejlesztőre vagy egy fotósra, keress bátran és közös munkával megvalósítjuk digitális álmaidat.
+            Ha szükséged van weboldal- és szoftverfejlesztőre vagy fotósra, keress bátran és közös munkával megvalósítjuk digitális álmaidat.
           </motion.p>
 
           {/* btn */}
@@ -51,7 +51,7 @@ const Home = () => {
         </div>
       </div>
       {/* image */}
-      <div className="w-[1280px] h-full absolute right-0 bottom-0">
+      <div className="w-[1280px] h-full absolute right-0 bottom-0 mb-32 lg:mb-0">
         {/* bg img */}
         <div
           role="img"
