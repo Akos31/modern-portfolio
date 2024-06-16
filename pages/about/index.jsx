@@ -152,7 +152,7 @@ const About = () => {
             variants={fadeIn("right", 0.6)}
             initial="hidden"
             animate="show"
-            className="text-xl mb-5"
+            className="text-xl mb-5 hidden md:block"
           >Tapasztalati évek száma</motion.h1>
           <motion.div
             variants={fadeIn("right", 0.6)}
