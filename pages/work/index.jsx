@@ -29,7 +29,7 @@ const Work = () => {
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0"
             >
-              Hobbiszinten már rengeteg weblapot készítettém, és volt már néhány megrendelés is. Lelkesen várom az új projekteket!
+              Hobbiszinten már rengeteg weblapot készítettém, és volt már néhány megrendelés is. Lelkesen vállalok új projekteket!
             </motion.p>
           </div>
 

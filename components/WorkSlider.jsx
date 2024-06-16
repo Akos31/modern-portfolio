@@ -13,14 +13,19 @@ const workSlides = {
     {
       images: [
         {
-          title: "title",
+          title: "Black Cab Burger",
           path: "/bcb1.4.png",
           link: "http://blackcabburger.hu",
         },
         {
-          title: "title",
+          title: "Kikötő Klub",
           path: "/kikoto1.0.png",
           link: "http://kikotoklub.hu",
+        },
+        {
+          title: "Fotózás",
+          path: "/photo1.0.png",
+          link: "http://photography.kelemenakos.hu",
         },
       ],
     },
@@ -78,6 +83,12 @@ const WorkSlider = () => {
                       <div className="text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150">
                         <BsArrowRight aria-hidden />
                       </div>
+                    </Link>
+                    <Link
+                        href={image.link}
+                        target="_blank"
+                        rel="noreferrer noopener" className="font-bold">
+                        {image.title}
                     </Link>
                   </div>
                 </div>
